@@ -3,41 +3,27 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-    <!-- nome del package principale -->
     <groupId>com.umberto</groupId>
-    <!-- nome del progetto -->
-    <artifactId>Twitter2</artifactId>
-    <name>Twitter2</name>
-    <!--  versione  -->
-    <version>1.0</version>
+    <artifactId>Twitter3</artifactId>
+    <name>Twitter3</name>
+    <version>1.1</version>
 
-    <description>Yay</description>
+    <description>Project</description>
     <url>https://umberto.com</url>
-
-    <!-- questo è il modo di commentare sui file pom -->
-    <!-- se vuoi rinominare classi o package, Refactor-> Rename, e aggiorna da solo i vari link  -->
-
-    <!-- Se vuoi usare testo UTF8 sul jar, devi dirlo al pom! -->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-    <!-- devi dire nel pom come buildare il progetto -->
     <build>
-        <!-- puoi specificare il nome del jar che uscirà fuori -->
-        <!-- questo uscirà tipo Test_v1.0.jar -->
         <finalName>${project.name}_v${project.version}</finalName>
 
         <plugins>
-            <!-- Devi dire a maven di usare java 8 se hai una versione diversa installata -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>7</source>
-                    <target>7</target>
+                    <source>8</source>
+                    <target>8</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -45,8 +31,6 @@
                 <artifactId>spring-boot-starter-json</artifactId>
                 <version>2.3.0.RELEASE</version>
             </plugin>
-            <!-- se vuoi modificare alcune variabili contenute nel MANIFEST del jar, puoi farlo
-            ad esempio puoi metterci la firma e altre cose, tipo la licenza del programma -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -59,8 +43,7 @@
                             <mainClass>com.umberto.Main</mainClass>
                         </manifest>
                         <manifestEntries>
-                            <Built-By>Umby</Built-By>
-                            <!-- queste le puoi inventare, uscirà scritto Built-By: Umby ad esempio -->
+                            <Built-By>Umberto</Built-By>
                             <url>${project.url}</url>
                         </manifestEntries>
                     </archive>
@@ -77,14 +60,10 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
-                            <!-- riduce il jar di dimensione levando la roba inutilizzata -->
                             <minimizeJar>true</minimizeJar>
-                            <!-- evita di creare (auto) un secondo pom senza dipendenze inutilizzate -->
                             <createDependencyReducedPom>false</createDependencyReducedPom>
                             <relocations>
-                                <!-- package da rinominare per evitare incompatibilità -->
                                 <relocation>
-                                    <!-- groupid.artifactid -->
                                     <pattern>org.apache.commons.lang3</pattern>
                                     <shadedPattern>com.umberto.shade.commons.lang3</shadedPattern>
                                 </relocation>
@@ -102,27 +81,19 @@
                 </executions>
             </plugin>
         </plugins>
-
-        <!-- Se vuoi copiare i contenuti della cartella resources dentro il jar, come ad esempio file di testo
-        oppure configurazioni, ad esempio su spigot lì metti il config.yml e il plugin.yml
-        devi dirgli di farlo, il filtering fa in modo che tu possa includere le variabili del pom sui file di testo
-        -->
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
             </resource>
         </resources>
-
     </build>
-
     <repositories>
         <repository>
             <id>maven-central</id>
             <url>https://oss.sonatype.org/content/groups/public</url>
         </repository>
     </repositories>
-
     <dependencies>
         <!-- qua scrivi le dipendenze -->
         <!--Se ad esempio usi la librearia Apache Commons Lang 3 la integri nel jar -->
@@ -181,11 +152,6 @@
             <groupId>org.sonatype.sisu</groupId>
             <artifactId>sisu-guice</artifactId>
             <version>2.1.7</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-            <version>5.2.6.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
