@@ -33,10 +33,8 @@ public class CreateBox {
             if ("comboBoxChanged".equals(e.getActionCommand())) {
                 String searchText = (String) comboBox.getSelectedItem();
                 searchText = searchText.trim().toLowerCase();
-                //if there are matches then add the search text in combo for later use
                 if (TableHelper.searchInTable(table, searchText)) {
                     DefaultComboBoxModel<String> model = (DefaultComboBoxModel<String>) comboBox.getModel();
-                    //check if search text is not empty and model already doesn't have it.
                     if (!searchText.isEmpty() && model.getIndexOf(searchText) == -1) {
                         model.addElement(searchText);
                     }

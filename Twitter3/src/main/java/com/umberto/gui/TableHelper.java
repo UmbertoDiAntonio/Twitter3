@@ -15,7 +15,6 @@ public class TableHelper {
     public static JTable createTable() {
         //prepare columns
         Vector<String> columns = new Vector<>();
-        columns.add("Name");
         columns.add("Screen_Name");
         columns.add("Message");
 
@@ -25,10 +24,10 @@ public class TableHelper {
         for (UserData userData : UserData.getUserDataList()) {
 
             Vector<String> row = new Vector<>();
-            row.add(userData.getUser());
             row.add(userData.getScreen_name());
             row.add(userData.getMessage());
             rows.add(row);
+
         }
         return new JTable(rows, columns);
     }

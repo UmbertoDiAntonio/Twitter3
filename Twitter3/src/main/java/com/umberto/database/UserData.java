@@ -1,23 +1,23 @@
 package com.umberto.database;
 
 import com.google.gson.annotations.Expose;
-import com.umberto.Main;
+
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 public class UserData {
 
     @Expose
     private String  message;
     @Expose
-    private String  user;
-    @Expose
     private String  screen_name;
     @Expose
     public static String[] filterlist;
 
-
+    public static Vector<String> messageList=new Vector<>();
+    public static Vector<String> screenList=new Vector<>();
     public static void divideString(String str){
         filterlist=str.split(",");
     }
@@ -26,9 +26,7 @@ public class UserData {
         return message;
     }
 
-    public  String getUser() {
-        return user;
-    }
+
     public static List<UserData> userList = new ArrayList<>();
     public  String getScreen_name() {
         return screen_name;
@@ -36,14 +34,13 @@ public class UserData {
     public static List<UserData> getUserDataList() {
         return userList;
     }
-    public UserData(String user, String screen_name, String message) {
-        this.user=user;
+    public UserData(String screen_name, String message) {
         this.screen_name=screen_name;
         this.message=message;
     }
 
     @Override
     public String toString() {
-        return  "\bUser{" + "nome='" + user + '\'' + ", screen_name='" + screen_name + '\'' + ", messaggio='" + message;
+        return  "\bUser{" + ", screen_name='" + screen_name + '\'' + ", messaggio='" + message;
     }
 }
