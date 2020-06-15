@@ -1,4 +1,7 @@
-com\umberto\gui\TableHelper.class
-com\umberto\Main.class
-com\umberto\gui\CreateBox.class
+com\umberto\gui\actions\ActionsClass.class
+com\umberto\JsonLoader.class
+com\umberto\Utils.class
 com\umberto\database\UserData.class
+com\umberto\Main.class
+com\umberto\gui\Gui.class
+com\umberto\database\InfoUser.class

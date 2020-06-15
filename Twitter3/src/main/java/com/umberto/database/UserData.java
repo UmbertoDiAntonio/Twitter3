@@ -7,40 +7,74 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
+
 public class UserData {
 
     @Expose
-    private String  message;
+     String message;
     @Expose
-    private String  screen_name;
+     String screenName;
     @Expose
-    public static String[] filterlist;
+     String createdAt;
+    @Expose
+    String month;
+    @Expose
+    String day;
+    @Expose
+    String hour;
+    @Expose
+    String year;
 
-    public static Vector<String> messageList=new Vector<>();
-    public static Vector<String> screenList=new Vector<>();
-    public static void divideString(String str){
-        filterlist=str.split(",");
+    public static Vector<String> getScreenList() {
+        return screenList;
     }
 
-    public  String getMessage() {
+    @Expose
+    static Vector<String> screenList=new Vector<>();
+
+
+    public String getMessage() {
         return message;
     }
 
+    public String getCreatedAt() {
+        return createdAt;
+    }
 
-    public static List<UserData> userList = new ArrayList<>();
-    public  String getScreen_name() {
-        return screen_name;
+    static List<UserData> userDataList = new ArrayList<>();
+    static List<UserData> userDataSubList = new ArrayList<>();
+    public String getScreenName() {
+        return screenName;
+    }
+    public static List<UserData> getUserDataSubList() {
+        return userDataSubList;
     }
     public static List<UserData> getUserDataList() {
-        return userList;
+        return userDataList;
     }
-    public UserData(String screen_name, String message) {
-        this.screen_name=screen_name;
-        this.message=message;
+
+    public String getMonth() {
+        return month;
+    }
+
+    public String getDay() {
+        return day;
+    }
+
+
+    public UserData(String screenName, String message, String createdAt, String month, String day, String hour, String year) {
+        this.screenName = screenName;
+        this.message = message;
+        this.createdAt = createdAt;
+        this.month = month;
+        this.day = day;
+        this.hour = hour;
+        this.year = year;
+
     }
 
     @Override
     public String toString() {
-        return  "\bUser{" + ", screen_name='" + screen_name + '\'' + ", messaggio='" + message;
+        return "\bUser{" + ", screen_name='" + screenName + '\'' + ", messaggio='" + message;
     }
 }
