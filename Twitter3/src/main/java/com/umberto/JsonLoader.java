@@ -13,8 +13,19 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-
+/**
+ * <h1>JSon Loader</h1>
+ * \nLa Classe JsonLoader del programma Twitter3 si occupa
+ * del ottenimento dei dati
+ */
 public class JsonLoader {
+    /**
+     * Questo è il costruttore della classe JsonLoader, stabilice una connessione
+     * con l'url del API e ne salva i dati
+     * @exception IOException On input error.
+     * @see IOException
+     *
+     */
     public JsonLoader() throws IOException {
         URL url = new URL("https://wd4hfxnxxa.execute-api.us-east-2.amazonaws.com/dev/api/1.1/search/tweets.json?q=" + Main.getKey() + "&count=" + Main.getnMessage());
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
