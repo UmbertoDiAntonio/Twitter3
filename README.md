@@ -15,10 +15,15 @@ su tutti gli utenti, con infinite parole chiave in modo combinato #returns tutti
 ## UML
 ### Classi
 ![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/fix/Twitter3/src/main/resources/UMLClassDiagram.png)
+### Casi D'Uso
+![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Twitter3/src/main/resources/UMLCasiD'Uso.PNG)
+### Sequenze
+![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Twitter3/src/main/resources/UMLSequence.png)
 ### Package Structure
 ![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Twitter3/src/main/resources/Package%20Structure.png)
 ### Type Heracly
 ![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Twitter3/src/main/resources/Type%20Hierarchy.png)
+
 
 ## Contribuire
 Le richieste pull sono benvenute. Per modifiche importanti, ti preghiamo di aprire prima un Issues per discutere di cosa vorresti cambiare.
