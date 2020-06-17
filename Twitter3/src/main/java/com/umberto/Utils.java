@@ -27,6 +27,7 @@ public class Utils {
      * il Metodo Utils() è un costruttore vuoto non esegue nulla
      * @deprecated
      */
+    @Deprecated
     Utils() {
 
     }
@@ -78,7 +79,7 @@ public class Utils {
      * @return boolean: Indica se il Json è stato già caricato
      */
     public static boolean isJustloaded() {
-        return justloaded;
+        return !justloaded;
     }
     /**
      * Questo Metodo serve a impostare lo stato del JSon da non caricato a caricato
@@ -302,7 +303,6 @@ public class Utils {
      * @param file Nome del file dove si vogliono salvare i dati
      */
     public static void standardOutputMessage(String file){
-        System.out.println(file);
         if(file.equals("outputFTA.json")||file.equals("outputFTC.json")) {
             JOptionPane.showMessageDialog(null, "Sono stati trovati " + getCont() + " messaggi \n " +
                     getRtCont() + " sono dei ReTweet, il " + (float) getRtCont() / UserData.getUserDataList().size() * 100 + "%\n" +

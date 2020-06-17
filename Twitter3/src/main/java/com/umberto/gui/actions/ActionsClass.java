@@ -15,6 +15,7 @@ public class ActionsClass {
     /**
      * @deprecated
      */
+    @Deprecated
     ActionsClass(){
 
     }
@@ -24,7 +25,7 @@ public class ActionsClass {
      */
     public static final ActionListener loadJsonAction = e -> {
        if(!Gui.getLoadJson().getText().equals("Da Inserire")&&!Gui.getSetKey().getText().equals("Da Inserire")) {
-           if (!Utils.isJustloaded()) {
+           if (Utils.isJustloaded()) {
                try {Utils.setJustloaded(true);
                    new JsonLoader();
                    Gui.getLoadJson().setText("Dati Caricati");
