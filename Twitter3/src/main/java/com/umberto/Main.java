@@ -30,7 +30,7 @@ public class Main {
     }
     /**
      * Questo metodo è usato per restituire un intero
-     * @return int This returns a int nMessage.
+     * @return int: Restituisce il numero di messaggi scelto.
      */
     public static int getnMessage() {
         return nMessage;
@@ -46,7 +46,7 @@ public class Main {
     }
     /**
      * Questo metodo è usato per restituire una String
-     * @return String This returns a String Key.
+     * @return String: Restituisce la parola chiave scelta
      */
     public static String getKey() {
         return key;
