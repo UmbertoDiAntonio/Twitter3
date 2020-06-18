@@ -22,9 +22,9 @@ public class JsonLoader {
     /**
      * Questo è il costruttore della classe JsonLoader, stabilice una connessione
      * con l'url del API e ne salva i dati
-     * @exception IOException On input error.
-     * @see IOException
      *
+     * @throws IOException On input error.
+     * @see IOException
      */
     public JsonLoader() throws IOException {
         URL url = new URL("https://wd4hfxnxxa.execute-api.us-east-2.amazonaws.com/dev/api/1.1/search/tweets.json?q=" + Main.getKey() + "&count=" + Main.getnMessage());
@@ -34,7 +34,6 @@ public class JsonLoader {
             return;
         InputStream inputStream = connection.getInputStream();
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-
 
         JsonElement je = new JsonParser().parse(bufferedReader);
         JsonObject all = je.getAsJsonObject();
@@ -57,10 +56,10 @@ public class JsonLoader {
             String name = je6.getAsString();
             String screenName = je7.getAsString();
             String createdAt = je8.getAsString();
-            String[] expandedDate=new String[5];
-            expandedDate=Utils.createdAtdivide(createdAt);//0=Giorno Settimana 1=Mese 2=Giorno 3=Ora 4=Fuso 5=Anno
-            UserData.getUserDataList().add(new UserData(screenName, message, createdAt,expandedDate[1],
-                    expandedDate[2],expandedDate[3],expandedDate[5]));
+            String[] expandedDate = new String[5];
+            expandedDate = Utils.createdAtdivide(createdAt);//0=Giorno Settimana 1=Mese 2=Giorno 3=Ora 4=Fuso 5=Anno
+            UserData.getUserDataList().add(new UserData(screenName, message, createdAt, expandedDate[1],
+                    expandedDate[2], expandedDate[3], expandedDate[5]));
         }
         for (UserData user : UserData.getUserDataList()
         ) {

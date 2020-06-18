@@ -93,6 +93,7 @@ public class ActionsClass {
         if(Utils.getContAzioni()!=0){
             Utils.standardOutputMessage("outputFTU.json");
             Utils.saveData("outputFTU.json",UserData.getUserDataSubList());
+            UserData.getUserDataSubList().clear();
         }else Utils.noKeyFoundInMessage();
     };
     /**
@@ -120,6 +121,7 @@ public class ActionsClass {
         if(Utils.getContAzioni()!=0){
             Utils.standardOutputMessage("outputFTA.json");
             Utils.saveData("outputFTA.json",UserData.getUserDataSubList());
+            UserData.getUserDataSubList().clear();
         }else Utils.noKeyFoundInMessage();
     };
     /**
@@ -148,6 +150,7 @@ public class ActionsClass {
         if(Utils.getContAzioni()!=0){
             Utils.standardOutputMessage("outputFTC.json");
             Utils.saveData("outputFTC.json",UserData.getUserDataSubList());
+            UserData.getUserDataSubList().clear();
         }else Utils.noKeyFoundInMessage();
     };
     /**

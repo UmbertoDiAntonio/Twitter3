@@ -304,7 +304,7 @@ public class Utils {
      */
     public static void standardOutputMessage(String file){
         if(file.equals("outputFTA.json")||file.equals("outputFTC.json")) {
-            JOptionPane.showMessageDialog(null, "Sono stati trovati " + getCont() + " messaggi \n " +
+            JOptionPane.showMessageDialog(null, "Sono stati trovati " + UserData.getUserDataSubList().size() + " messaggi \n " +
                     getRtCont() + " sono dei ReTweet, il " + (float) getRtCont() / UserData.getUserDataList().size() * 100 + "%\n" +
                     tendence() + "\n" +
                     "Ho salvato i risultati nel file " + file + ", nella cartella\n" + getDataFolder());
