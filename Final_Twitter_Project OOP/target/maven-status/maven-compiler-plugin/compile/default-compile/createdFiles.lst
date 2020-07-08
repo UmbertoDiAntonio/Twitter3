@@ -1,0 +1,10 @@
+com\umberto\controller\IndexController.class
+com\umberto\other\Utils.class
+com\umberto\database\UserData.class
+com\umberto\other\OutputGenerator.class
+com\umberto\gui\actions\ActionsClass.class
+com\umberto\Twitter4Application.class
+com\umberto\controller\MyController.class
+com\umberto\other\JsonLoader.class
+com\umberto\gui\Gui.class
+com\umberto\Twitter4ApplicationTest.class
