@@ -4,6 +4,9 @@ Twitter3 è un Applicazione Java per controllare il contenuto di messaggi scritt
 ## Rotte
 <strong>GET</strong> / <br>
   Rotta con cui è possibile accedere alla lista delle rotte
+  <blockquote>
+<p><strong>POST</strong> /stats/year/{ year }</p>
+</blockquote>
 ## Utilizzo
 ![GUI](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Final_Twitter_Project%20OOP/src/main/resources/GUI.PNG)
 
