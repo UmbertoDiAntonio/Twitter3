@@ -7,7 +7,7 @@ Twitter3 è un Applicazione Java per controllare il contenuto di messaggi scritt
   <blockquote>
 <p><strong>POST</strong> /post</p>
   </blockquote>
-  Rotta con cui è possibile accedere alla lista dei post
+  Rotta con cui è possibile accedere alla lista dei post<br>
 ## Utilizzo
 ![GUI](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Final_Twitter_Project%20OOP/src/main/resources/GUI.PNG)
 
