@@ -11,10 +11,11 @@ cui potrai visionare i messaggi e le date di invio, avrai anche accesso a 3 meto
 solo sull'utente selezionato, a parola chiave singola # returns tutti i messaggi dell'utente che contengono la parola chiave inserita
 su tutti gli utenti, con infinite parole chiave  # returns tutti i messaggi degli utenti che contengono almeno una parola chiave tra quelle inserite
 su tutti gli utenti, con infinite parole chiave in modo combinato #returns tutti i messaggi degli utenti che contengono tutte le parola chiave inserite 
+https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Final_Twitter_Project OOP/src/main/resources/GUI.png
 ```
 ## UML
 ### Classi
-![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/fix/Twitter3/src/main/resources/UMLClassDiagram.png)
+![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Twitter3/src/main/resources/UMLClassDiagram.png)
 ### Casi D'Uso
 ![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Twitter3/src/main/resources/UMLCasiD'Uso.PNG)
 ### Sequenze
