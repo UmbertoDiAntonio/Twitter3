@@ -8,3 +8,4 @@ com\umberto\controller\MyController.class
 com\umberto\other\JsonLoader.class
 com\umberto\gui\Gui.class
 com\umberto\Twitter4ApplicationTest.class
+com\umberto\Twitter4Application$1.class

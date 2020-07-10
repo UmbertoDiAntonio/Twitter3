@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Rotte Programma</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+Chiamate Possibili
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+Created by Umberto Di Antonio
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message618">
+
+      <div class="body">
+
+       <div class="text">
+	   <strong>Mostra questa lista              :</strong> http://localhost:8080/<br>
+	   <strong>Mostra la lista completa dei post:</strong> http://localhost:8080/post<br>
+	   <strong>Mostra questa lista              :</strong> http://localhost:8080/setblacklist/(one:two:tree:..)<br>
+<strong>Mostra i post dell user          :</strong> http://localhost:8080/post/author/(author)<br>
+<strong>Mostra i post contenenti il testo:</strong> http://localhost:8080/post/author/contains/(message)<br>
+<strong>Mostra i post con tag            :</strong> http://localhost:8080/post/author/contains/tag<br>
+<strong>Mostra i post con retweet        :</strong> http://localhost:8080/post/author/contains/retweet<br>
+<strong>Mostra i post dell user con testo:</strong> http://localhost:8080/post/author/(author)/contains/(message)<br>
+<strong>Mostra i post con i parametri temporali</strong>    : <br>
+		http://localhost:8080/post/author/(author)/contains/(message)/year/(year)/month/(month)/day/(day)/hour/(hour)<br>
+		http://localhost:8080/post/author/(author)/contains/(message)/year/(year)/month/(month)/day/(day)<br>
+		http://localhost:8080/post/author/(author)/contains/(message)/year/(year)/month/(month)<br>
+		http://localhost:8080/post/author/(author)/contains/(message)/year/(year)<br>
+<br>
+	
+		
+		<strong>Trucchi</strong>    : <br> 
+		(message) può essere definito come una lista usando come separatore tra le parole il :<br>
+		puoi salvare una lista di parole con setblacklist e richiamarla inserendo blacklist in (message)<br>
+		(author) può essere ignorato, sarà autocompilato come ALL<br>
+		(message) può essere ignorato, sarà autocompilato come ALL<br>
+       </div>
+
+    </div>
+
+   </div>
+
+  </div>
+  </div>
+
+ </body>
+
+</html>
