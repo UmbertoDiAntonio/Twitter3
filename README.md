@@ -14,7 +14,7 @@ su tutti gli utenti, con infinite parole chiave in modo combinato #returns tutti
 
 ```
 ## UML
-![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Final_Twitter_Project OOP/src/main/resources/GUI.png)
+![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Final_Twitter_Project%20OOP/src/main/resources/GUI.PNG)
 ### Classi
 ![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Twitter3/src/main/resources/UMLClassDiagram.png)
 ### Casi D'Uso
