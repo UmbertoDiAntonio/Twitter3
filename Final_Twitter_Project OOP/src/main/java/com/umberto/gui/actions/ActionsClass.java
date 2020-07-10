@@ -1,9 +1,13 @@
 package com.umberto.gui.actions;
 
+import com.umberto.Twitter4Application;
 import com.umberto.other.JsonLoader;
 import com.umberto.other.Utils;
 
 import com.umberto.gui.Gui;
+import com.umberto.controller.*;
+import org.springframework.boot.SpringApplication;
+import org.springframework.context.ApplicationContext;
 
 import javax.swing.*;
 import java.awt.event.ActionListener;
@@ -15,25 +19,22 @@ public class ActionsClass {
      * @deprecated
      */
     @Deprecated
-    ActionsClass(){
-
-    }
+    ActionsClass(){    }
 
     /**
      * Questo Metodo di tipo ActionListener Carica i dati del Json e ne esegue le prime statistiche
      */
     public static final ActionListener loadJsonAction = e -> {
        if(!Gui.getLoadJson().getText().equals("Da Inserire")&&!Gui.getSetKey().getText().equals("Da Inserire")) {
-           if (Utils.isJustloaded()) {
+           if (Utils.neverOpened()) {
                try {
-                   Utils.setJustloaded(true);
+                   Utils.setJsonOpened(true);
                    new JsonLoader();
-                   Gui.getLoadJson().setText("Dati Caricati");
+                   Gui.getLoadJson().setText("Attivo");
                } catch (IOException k) {
                    JOptionPane.showMessageDialog(null, "ERRORE, caricamento JSON fallito", Utils.ERROR, JOptionPane.ERROR_MESSAGE);
                }
            }else JOptionPane.showMessageDialog(null,"Dati già Caricati", Utils.ERROR,JOptionPane.ERROR_MESSAGE);
-
        } else JOptionPane.showMessageDialog(null, "ERRORE, Inserisci i dati necessari", Utils.ERROR, JOptionPane.ERROR_MESSAGE);
 
        };
@@ -51,38 +52,72 @@ public class ActionsClass {
         Utils.setKey((JOptionPane.showInputDialog(null,"Inserisci la Key che vuoi usare nella ricerca","es:terremoto")));
         Gui.getSetKey().setText(Utils.getKey());
     };
-
-    public static final ActionListener openAllPost = e -> {
+    /**
+     * Questo Metodo di tipo ActionListener Stabilisce una connessione con la pagina Git del Progetto
+     */
+    public static final ActionListener openReadMdPost = e -> {
         try {
-            Utils.openWebLink("http://localhost:8080/post");
-        } catch (URISyntaxException | IOException uriSyntaxException) {
-            uriSyntaxException.printStackTrace();
-        }
-    };
-    public static final ActionListener openToDayPost = e -> {
-        try {
-            Utils.openWebLink("http://localhost:8080/post/author/contains/year/month/day/"+Utils.getDayOfMonth());
-        } catch (URISyntaxException | IOException uriSyntaxException) {
-            uriSyntaxException.printStackTrace();
-        }
-    };
-    public static final ActionListener openTagPost = e -> {
-        try {
-            Utils.openWebLink("http://localhost:8080/post/author/contains/tag");
-        } catch (URISyntaxException | IOException uriSyntaxException) {
-            uriSyntaxException.printStackTrace();
-        }
-    };
-    public static final ActionListener openRetweetPost = e -> {
-        try {
-            Utils.openWebLink("http://localhost:8080/post/author/contains/retweet");
+            Utils.openWebLink("https://github.com/UmbertoDiAntonio/Twitter3");
         } catch (URISyntaxException | IOException uriSyntaxException) {
             uriSyntaxException.printStackTrace();
         }
     };
     /**
+     * Questo Metodo di tipo ActionListener Stabilisce una connessione con la pagina http://localhost8080/ del Progetto
+     */
+    public static final ActionListener openTutorial = e -> {
+        try {
+            if(!Gui.getLoadJson().getText().equals("Disattivo"))
+                Utils.openWebLink("http://localhost:8080/");
+                else JOptionPane.showMessageDialog(null,"Programma non Avviato",Utils.ERROR, JOptionPane.ERROR_MESSAGE);
+        } catch (URISyntaxException | IOException uriSyntaxException) {
+            uriSyntaxException.printStackTrace();
+        }
+    };
+    /**
+     * Questo Metodo di tipo ActionListener Stabilisce una connessione con la pagina http://localhost8080/post del Progetto
+     */
+    public static final ActionListener openPost = e -> {
+        try {
+            if(!Gui.getLoadJson().getText().equals("Disattivo"))
+                Utils.openWebLink("http://localhost:8080/post");
+            else JOptionPane.showMessageDialog(null,"Programma non Avviato",Utils.ERROR, JOptionPane.ERROR_MESSAGE);
+        } catch (URISyntaxException | IOException uriSyntaxException) {
+            uriSyntaxException.printStackTrace();
+        }
+    };
+    /**
+     * Questo Metodo di tipo ActionListener Stabilisce una connessione con la pagina http://localhost8080/post/contains/retweet del Progetto
+     */
+    public static final ActionListener openPostRet = e -> {
+        try {
+            if(!Gui.getLoadJson().getText().equals("Disattivo"))
+                Utils.openWebLink("http://localhost:8080/post/author/contains/retweet");
+            else JOptionPane.showMessageDialog(null,"Programma non Avviato",Utils.ERROR, JOptionPane.ERROR_MESSAGE);
+        } catch (URISyntaxException | IOException uriSyntaxException) {
+            uriSyntaxException.printStackTrace();
+        }
+    };
+    /**
+     * Questo Metodo di tipo ActionListener Stabilisce una connessione con la pagina http://localhost8080/post/contains/years/2020 del Progetto
+     */
+    public static final ActionListener openPostYears = e -> {
+        try {
+            if(!Gui.getLoadJson().getText().equals("Disattivo"))
+                Utils.openWebLink("http://localhost:8080/post/author/contains/years/2020");
+            else JOptionPane.showMessageDialog(null,"Programma non Avviato",Utils.ERROR, JOptionPane.ERROR_MESSAGE);
+        } catch (URISyntaxException | IOException uriSyntaxException) {
+            uriSyntaxException.printStackTrace();
+        }
+    };
+
+    /**
      * Questo Metodo di tipo ActionListener Chiude il Programma
      */
-    public static final ActionListener closeButton = e -> Gui.getFrame().dispose();
+    public static final ActionListener closeButton = e -> {
+        Gui.getClose().setText("Chiuso");
+        Gui.getFrame().dispose();
+
+    };
 
 }

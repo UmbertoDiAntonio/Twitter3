@@ -1,22 +1,27 @@
 package com.umberto.gui;
 
 import com.umberto.gui.actions.ActionsClass;
+import com.umberto.other.Utils;
 
 import javax.swing.*;
 import java.awt.*;
 
-
 public class Gui extends JFrame{
     static final JButton setnMsg = new JButton("Da Inserire");
     static final JButton setKey = new JButton("Da Inserire");
-    static final JButton loadJson = new JButton("Non Caricati");
+    static final JButton close = new JButton("Chiudi");
+    static final JButton loadJson = new JButton("Disattivo");
     static final JFrame frame = new JFrame("Twitter Project");
 
-
     /**
-     * Questo MetodoRestituisce l'oggetto JButton SetnMsg
-     * @return JButton: Restituisce l'oggetto JButton SetnMsg
+     * Questo MetodoRestituisce l'oggetto JButton Close
+     * @return JButton: Restituisce l'oggetto JButton Close
      */
+    public static JButton getClose() {
+        return close;
+    }
+
+
     public static JButton getSetnMsg() {
         return setnMsg;
     }
@@ -44,55 +49,60 @@ public class Gui extends JFrame{
 
 
     /**
-     * Questo Metodo Genera un Intefaccia Grafica Contenente tutte le funzioni del Programma
+     * Questo Metodo Genera un Intefaccia Grafica Per Impostare il programma
      */
     public Gui() {
-        JButton close = new JButton("Chiudi");
-        JButton allPost= new JButton("Tutti i Post");
-        JButton dayPost= new JButton("Post Recenti (Oggi)");
-        JButton reTweetPost= new JButton("Post con ReTweet");
-        JButton tagPost= new JButton("Post con Tag");
+        JButton gitHub= new JButton("Apri GitHub");
+        JButton tutorial=new JButton("Apri Rotta \\ (Guida Rotte)");
+        JButton post=new JButton("Apri Rotta \\post");
+        JButton retwteet=new JButton("Apri Rotta \\post\\author\\contains\\retweet");
+        JButton year=new JButton("Apri \\post\\author\\contains\\years\\2020");
 
         JPanel panelLoad=new JPanel();
         panelLoad.setLayout(new GridLayout(3,2));
-        JPanel panelInfo=new JPanel();
-        panelInfo.setLayout(new GridLayout(6,2));
-        JPanel selectUser=new JPanel();
-        selectUser.setLayout(new GridLayout(1,2));
-        JPanel panelfilt=new JPanel();
-        panelfilt.setLayout(new GridLayout(2,2));
+        JPanel panelExtra=new JPanel();
+        panelExtra.setLayout(new GridLayout(2,2));
+        JPanel panelCall=new JPanel();
+        panelCall.setLayout(new GridLayout(2,2));
 
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        frame.setSize(new Dimension(530,450));
-        frame.setLayout(new GridLayout(7,1,5,5));
+        frame.setSize(new Dimension(480,350));
+        frame.setLayout(new GridLayout(3,1,5,5));
 
         panelLoad.add(new JLabel("Imposta il numero di messaggi "));
         panelLoad.add(setnMsg);
         panelLoad.add(new JLabel("Imposta una parola chiave da cercare"));
         panelLoad.add(setKey);
-        panelLoad.add(new JLabel("Stato Dati :"));
+        panelLoad.add(new JLabel("Stato Programma :"));
         panelLoad.add(loadJson);
         frame.add(panelLoad);
 
+        panelCall.add(tutorial);
+        panelCall.add(post);
+        panelCall.add(retwteet);
+        panelCall.add(year);
+        frame.add(panelCall);
 
-
-        frame.add(new JSeparator());
-        frame.add(new JLabel("Esempi di Chiamate"));
-        panelfilt.add(allPost);
-        panelfilt.add(dayPost);
-        panelfilt.add(reTweetPost);
-        panelfilt.add(tagPost);
-        frame.add(panelfilt);
-        frame.add(close);
+        panelExtra.add(new JSeparator());
+        panelExtra.add(new JSeparator());
+        panelExtra.add(gitHub);
+        panelExtra.add(close);
+        frame.add(panelExtra);
 
         loadJson.addActionListener(ActionsClass.loadJsonAction);
         setKey.addActionListener(ActionsClass.setKeyAction);
         setnMsg.addActionListener(ActionsClass.setMsgAction);
         close.addActionListener(ActionsClass.closeButton);
-        allPost.addActionListener(ActionsClass.openAllPost);
-        dayPost.addActionListener(ActionsClass.openToDayPost);
-        reTweetPost.addActionListener(ActionsClass.openRetweetPost);
-        tagPost.addActionListener(ActionsClass.openTagPost);
+        gitHub.addActionListener(ActionsClass.openReadMdPost);
+        tutorial.addActionListener(ActionsClass.openTutorial);
+        post.addActionListener(ActionsClass.openPost);
+        retwteet.addActionListener(ActionsClass.openPostRet);
+        year.addActionListener(ActionsClass.openPostYears);
+        if (Utils.getArgsValue().length == 1) {
+            setKey.setText("Disattivato: Dati Args");setnMsg.setText("Disattivato: Dati Args");
+            setKey.removeActionListener(ActionsClass.setKeyAction);
+            setnMsg.removeActionListener(ActionsClass.setMsgAction);
+        }
 
 
         frame.setVisible(true);

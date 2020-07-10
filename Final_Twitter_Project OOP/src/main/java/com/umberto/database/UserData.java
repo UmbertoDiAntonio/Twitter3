@@ -24,19 +24,8 @@ public class UserData {
     String day;
     @Expose
     String hour;
-
-    public String getHour() {
-        return hour;
-    }
-
-    public String getYear() {
-        return year;
-    }
-
     @Expose
     String year;
-    @Expose
-    static List<String> screenList=new ArrayList<>();
     @Expose
     static List<UserData> userDataList = new ArrayList<>();
     @Expose
@@ -47,6 +36,20 @@ public class UserData {
      */
     public String getScreenName() {
         return screenName;
+    }
+    /**
+     * Questo metodo è usato per restituire una Stringa numerica che rappresenta l'ora di scrittura del post
+     * @return hour Restituisce l'ora'
+     */
+    public String getHour() {
+        return hour;
+    }
+    /**
+     * Questo metodo è usato per restituire una Stringa numerica che rappresenta l'anno scrittura del post
+     * @return year Restituisce l'anno
+     */
+    public String getYear() {
+        return year;
     }
     /**
      * Questo metodo è usato per ottenere una sottolista di userDataList
@@ -83,11 +86,6 @@ public class UserData {
     public String getMessage() {
         return message;
     }
-    /**
-     * Questo metodo è usato per ottenere l'elenco degli screenName
-     * @return List<String> Restituisce un elenco di ScreenName
-     */
-    public static List<String> getScreenList() { return screenList; }
 
     /**
      * Questo metodo è usato per generare un oggetto di tipo UserData che contiene i dati ottenuti dal JSonLoader

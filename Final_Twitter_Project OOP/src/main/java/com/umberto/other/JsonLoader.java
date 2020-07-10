@@ -24,7 +24,7 @@ public class JsonLoader {
      * Questo è il costruttore della classe JsonLoader, stabilice una connessione
      * con l'url del API e ne salva i dati
      *
-     * @throws IOException On input error.
+     * @throws IOException  Errore input
      * @see IOException
      */
     public JsonLoader() throws IOException {
@@ -70,12 +70,6 @@ public class JsonLoader {
             UserData.getUserDataList().add(new UserData(screenName, message, createdAt, completeDate[1],
                     completeDate[2], completeDate[3], completeDate[5]));
         }
-        for (UserData user : UserData.getUserDataList()
-        ) {
-            UserData.getScreenList().add(user.getScreenName());
-        }
         Utils.setSpringBootExecutable(true);
     }
-
-
 }
