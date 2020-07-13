@@ -18,8 +18,9 @@ Twitter3 è un Applicazione Java per controllare il contenuto di messaggi scritt
 ![GUI](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Final_Twitter_Project%20OOP/src/main/resources/GUI.PNG)
 
 ```
-Avvia il file jar tramite cmd, imposta un numero di messaggi (massimo 100) e una prima parola chiave da cercare, clicca sul pulsante di Avviamento, avverà ora il caricamento di
-SpringBoot, potrai effettuare delle chiamate alle rotte di esempio presenti nell'interfaccia o aprire questa pagina, per chiamate più specifiche avviare postman o un browser e digitare la chiamata che si desidera
+Avvia il file jar tramite cmd, imposta un numero di messaggi (massimo 100) e una prima parola chiave da cercare, clicca sul pulsante
+di Avviamento, avverà ora il caricamento di SpringBoot, potrai effettuare delle chiamate alle rotte di esempio presenti 
+nell'interfaccia o aprire questa pagina, per chiamate più specifiche avviare postman o un browser e digitare la chiamata che si desidera
 
 ```
 ## UML
