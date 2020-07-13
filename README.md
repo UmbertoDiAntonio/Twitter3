@@ -10,6 +10,83 @@ Twitter3 è un Applicazione Java per controllare il contenuto di messaggi scritt
 <p><strong>POST</strong> /post</p>
   </blockquote>
   Rotta con cui è possibile accedere alla lista dei post<br>
+    <blockquote>
+<p><strong>GET</strong> /setblacklist/{list}</p>
+  </blockquote>
+  Rotta con cui è possibile impostare una lista di parole da poter richiamare in seguito<br>
+    <blockquote>
+<p><strong>GET</strong> /post/author</p>
+  </blockquote>
+  Rotta con cui è possibile accedere alla lista dei post di tutti gli autori<br>
+    <blockquote>
+<p><strong>GET</strong> /post/author/{author}</p>
+  </blockquote>
+  Rotta con cui è possibile accedere alla lista dei post di un autore<br>
+    <blockquote>
+<p><strong>GET</strong> /post/author/{author}/contains/{message}</p>
+  </blockquote>
+  Rotta con cui è possibile accedere alla lista dei post di un autore che contengono una o più parole inserite<br>
+    <blockquote>
+<p><strong>GET</strong> /post/author/contains/{message}</p>
+  </blockquote>
+Rotta con cui è possibile accedere alla lista dei post di ogni autore che contengono una o più parole inserite<br>
+    <blockquote>
+<p><strong>GET</strong> /post/author/{author}/contains/{message}/year/{year}</p>
+  </blockquote>
+  Rotta con cui è possibile accedere alla lista dei post di un autore che contengono una o più parole inserite scritti nell'anno inserito<br>
+      <blockquote>
+<p><strong>GET</strong> /post/author/contains/{message}/year/{year}</p>
+  </blockquote>
+  Rotta con cui è possibile accedere alla lista dei post di ogni autore che contengono una o più parole inserite scritti nell'anno inserito<br>
+      <blockquote>
+<p><strong>GET</strong> /post/author/contains/year/{year}</p>
+  </blockquote>
+  Rotta con cui è possibile accedere alla lista dei post di ogni autore scritti nell'anno inserito<br>
+      <blockquote>
+<p><strong>GET</strong> /post/author/{author}/contains/{message}/year/{year}/month/{month}</p>
+  </blockquote>
+  Rotta con cui è possibile accedere alla lista dei post di un autore che contengono una o più parole inserite scritti nell'anno e mese inseriti<br>
+        <blockquote>
+<p><strong>GET</strong> /post/author/contains/{message}/year/{year}/month/{month}</p>
+  </blockquote>
+  Rotta con cui è possibile accedere alla lista dei post di ogni autore che contengono una o più parole inserite scritti nell'anno e mese inseriti<br>
+        <blockquote>
+<p><strong>GET</strong> /post/author/contains/year/{year}/month/{month}</p>
+  </blockquote>
+  Rotta con cui è possibile accedere alla lista dei post di ogni autore scritti nell'anno e mese inseriti<br>
+        <blockquote>
+<p><strong>GET</strong> /post/author/{author}/contains/{message}/year/{year}/month/{month}/day/{day}</p>
+  </blockquote>
+  Rotta con cui è possibile accedere alla lista dei post di un autore che contengono una o più parole inserite scritti nell'anno, mese e giorno inseriti<br>
+          <blockquote>
+<p><strong>GET</strong> /post/author/contains/{message}/year/{year}/month/{month}/day/{day}</p>
+  </blockquote>
+  Rotta con cui è possibile accedere alla lista dei post di ogni autore che contengono una o più parole inserite scritti nell'anno, mese e giorno inseriti<br>
+          <blockquote>
+<p><strong>GET</strong> /post/author/contains/year/{year}/month/{month}/day/{day}</p>
+  </blockquote>
+  Rotta con cui è possibile accedere alla lista dei post di ogni autore scritti nell'anno, mese e giorno inseriti<br>
+          <blockquote>
+<p><strong>GET</strong> /post/author/{author}/contains/{message}/year/{year}/month/{month}/day/{day}/hour/{hour}</p>
+  </blockquote>
+  Rotta con cui è possibile accedere alla lista dei post di un autore che contengono una o più parole inserite scritti nell'anno, mese, giorno e ora inseriti<br>
+            <blockquote>
+<p><strong>GET</strong> /post/author/contains/{message}/year/{year}/month/{month}/day/{day}/hour/{hour}</p>
+  </blockquote>
+  Rotta con cui è possibile accedere alla lista dei post di ogni autore che contengono una o più parole inserite scritti nell'anno, mese, giorno e ora inseriti<br>
+            <blockquote>
+<p><strong>GET</strong> /post/author/contains/year/{year}/month/{month}/day/{day}/hour/{hour}</p>
+  </blockquote>
+  Rotta con cui è possibile accedere alla lista dei post di ogni autore scritti nell'anno, mese, giorno e ora inseriti<br>
+              <blockquote>
+<p><strong>GET</strong> /post/author/contains/retweet</p>
+  </blockquote>
+  Rotta con cui è possibile accedere alla lista dei post retweet<br>
+              <blockquote>
+<p><strong>GET</strong> /post/author/contains/tag</p>
+  </blockquote>
+  Rotta con cui è possibile accedere alla lista dei post che contengono tag<br>
+  
   </div>
   </div>
   
