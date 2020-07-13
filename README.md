@@ -1,5 +1,28 @@
 # Twitter3
 Twitter3 è un Applicazione Java per controllare il contenuto di messaggi scritti su twitter e eseguire statistiche su di essi
+## Formato Dei Dati Restituiti
+In seguito ad una richiesta al servizio i risultati vengono rappresentati mediante un JSON come un array di oggetti che rappresentano i dati appartenenti al dataset.<br>
+Nello specifico il formato di ogni singolo elemento è il seguente:</p>
+<pre><code>{
+    "message": "RT @INGVterremoti: [STIMA #PROVVISORIA] #terremoto Mag tra 3.4 e 3.9 ore 14:06 IT del 13-07-2020, prov/zona Belluno #INGV_24825601 https://…",
+    "screenName": "asiram1308",
+    "createdAt": "Mon Jul 13 15:51:30 +0000 2020",
+    "month": "Jul",
+    "day": "13",
+    "hour": "15:51:30",
+    "year": "2020"
+  }
+</code></pre>
+<p>In particolare:</p>
+<ul>
+<li><strong>message</strong> rappresenta il testo del messaggio selezionato</li>
+<li><strong>screenName</strong> rappresenta l'username dell'autore</li>
+<li><strong>createdAt</strong> fornisce una data univoca di generazione del messaggio</li>
+<li><strong>month</strong> rappresenta il mese in cui è stato generato il messaggio</li>
+<li><strong>day</strong> rappresenta il giorno in cui è stato generato il messaggio</li>
+<li><strong>hour</strong> rappresenta l'ora in cui è stato generato il messaggio</li>
+<li><strong>year</strong> rappresenta l'anno in cui è stato generato il messaggio</li>
+</ul>
 
 ## Rotte
   <blockquote>
