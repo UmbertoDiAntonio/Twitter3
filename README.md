@@ -107,10 +107,7 @@ nell'interfaccia o aprire questa pagina, per chiamate più specifiche avviare po
 ![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Twitter3/src/main/resources/UMLCasiD'Uso.PNG)
 ### Sequenze
 ![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Twitter3/src/main/resources/UMLSequence.png)
-### Package Structure
-![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Twitter3/src/main/resources/Package%20Structure.png)
-### Type Heracly
-![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Twitter3/src/main/resources/Type%20Hierarchy.png)
+
 
 
 ## Contribuire
