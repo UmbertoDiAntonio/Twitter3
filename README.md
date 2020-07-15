@@ -124,13 +124,15 @@ nell'interfaccia o aprire questa pagina, per chiamate più specifiche avviare po
 
 ```
 ## UML
-### Classi
+### Class Diagram
 ![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Final_Twitter_Project%20OOP/src/main/resources/Classi.PNG)
-### Package
+### Package Diagram
 ![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Final_Twitter_Project%20OOP/src/main/resources/Package.png)
-### Casi D'Uso
+### Use Case Diagram
 ![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Final_Twitter_Project%20OOP/src/main/resources/UseCase.png)
-### Sequenze
+### Activity Diagram
+![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Final_Twitter_Project%20OOP/src/main/resources/Activity.png)
+### Sequence Diagram
 ![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Final_Twitter_Project%20OOP/src/main/resources/SequenceDiagram.png)
 
 
