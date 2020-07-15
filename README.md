@@ -129,7 +129,9 @@ nell'interfaccia o aprire questa pagina, per chiamate più specifiche avviare po
 ### Casi D'Uso
 ![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Twitter3/src/main/resources/UMLCasiD'Uso.PNG)
 ### Sequenze
-![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Twitter3/src/main/resources/UMLSequence.png)
+![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Final_Twitter_Project%20OOP/src/main/resources/SequenceDiagram.jpg)
+### Package
+![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Final_Twitter_Project%20OOP/src/main/resources/Package.png)
 
 
 
