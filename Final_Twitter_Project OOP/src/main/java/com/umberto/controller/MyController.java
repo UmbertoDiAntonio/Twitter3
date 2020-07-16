@@ -6,7 +6,6 @@ import com.umberto.other.Utils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.lang.reflect.UndeclaredThrowableException;
 import java.time.Month;
 
 /**
@@ -23,9 +22,9 @@ public class MyController {
         return OutputGenerator.outputPost(UserData.getUserDataList());
     }
     /**
-     * Rotta che mostra i messaggi di un utente, recuperati dal JSon, non filtrati, sotto forma di JSON
+     * Rotta che Serve a memorizzare una serie di parole in una lista da poter richiamare all'occorrenza
      * @param list lista che si vuole salvare
-     * @return Restituisce un JSON contenente i messaggi di un utente, non filtrati
+     * @return String: Messaggio che informa del successo o fallimento delle chiamata
      */
     @GetMapping(value = "/setblacklist/{list}", produces = "application/json")
     public Object setList(@PathVariable("list") String list) {

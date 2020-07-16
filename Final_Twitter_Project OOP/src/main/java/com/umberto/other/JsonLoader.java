@@ -33,7 +33,6 @@ public class JsonLoader {
 
         if (Utils.getArgsValue().length == 1) {
             url = new URL(Utils.argsValue[0]);
-            //Url by args ;-)
         }
 
 

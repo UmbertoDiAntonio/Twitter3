@@ -5,9 +5,6 @@ import com.umberto.other.JsonLoader;
 import com.umberto.other.Utils;
 
 import com.umberto.gui.Gui;
-import com.umberto.controller.*;
-import org.springframework.boot.SpringApplication;
-import org.springframework.context.ApplicationContext;
 
 import javax.swing.*;
 import java.awt.event.ActionListener;
