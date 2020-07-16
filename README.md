@@ -131,7 +131,7 @@ nell'interfaccia o aprire questa pagina, per chiamate più specifiche avviare po
 ### Use Case Diagram
 ![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Final_Twitter_Project%20OOP/src/main/resources/UseCase.png)
 ### Activity Diagram
-![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Final_Twitter_Project%20OOP/src/main/resources/Activity.png)
+![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Final_Twitter_Project%20OOP/src/main/resources/ActivityDiagram.png)
 ### Sequence Diagram
 ![UML](https://github.com/UmbertoDiAntonio/Twitter3/blob/master/Final_Twitter_Project%20OOP/src/main/resources/SequenceDiagram.png)
 
